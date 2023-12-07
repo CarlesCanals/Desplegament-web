@@ -1,7 +1,7 @@
 <?php
 
 class Connexio {
-    //ok final final 5
+    //ok final final 5 final---
     private $host = "localhost";
     private $usuario = "root";
     private $contraseña = "";
