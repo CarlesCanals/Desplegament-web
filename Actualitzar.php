@@ -2,7 +2,7 @@
 
 require_once('Connexio.php');
 
-//Comentari de prova
+//Comentari de prova modificat a branca develop
 class Actualitzar {
     
     public function actualizar($id, $nom, $descripcio, $preu, $categoria) {
