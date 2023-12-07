@@ -2,7 +2,6 @@
 
 require_once('Connexio.php');
 
-
 class Actualitzar {
     
     public function actualizar($id, $nom, $descripcio, $preu, $categoria) {
