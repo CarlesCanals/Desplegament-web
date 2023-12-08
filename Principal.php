@@ -6,17 +6,17 @@ require_once('Header.php');
 class Principal {
     
     public function mostrarProductes() {
-        // Crear una instancia de la clase de conexión
+        // 
         $conexionObj = new Connexio();
         $conexion = $conexionObj->obtenirConnexio();
 
-        // Consulta para obtener la lista de productos
+        // 
         $consulta = "SELECT p.id, p.nom, p.descripció, p.preu, c.nom as categoria
                      FROM productes p
                      INNER JOIN categories c ON p.categoria_id = c.id";
         $resultado = $conexion->query($consulta);
 
-        // Cabecera HTML con Bootstrap
+        // 
         echo '<!DOCTYPE html>
               <html lang="es">
               <head>
@@ -29,7 +29,7 @@ class Principal {
               <body>
                 <div class="container mt-5" style="margin-bottom: 100px">';
 
-        // Verificar si hi ha resultats
+        // 
         if ($resultado->num_rows > 0) {
             echo '<hr><a href="Nou.php" class="btn btn-primary">Nou producte</a><hr>';
             echo '<table class="table table-striped">';
@@ -72,12 +72,12 @@ class Principal {
 
         
 
-        // Cerrar la conexión
+        // 
         $conexion->close();
     }
 }
 
-// Crear una instancia de la clase y mostrar la lista de productos
+// 
 $listaProductos = new Principal();
 $listaProductos->mostrarProductes();
 

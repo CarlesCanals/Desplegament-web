@@ -4,23 +4,23 @@ require_once('Connexio.php');
 class Nou {
 
     public function afegirProducte($nom, $descripcio, $preu, $categoria) {
-        // Verificar si se han proporcionado valores válidos
+        // 
         if (!isset($nom) || !isset($descripcio) || !isset($preu) || !isset($categoria)) {
             echo '<p>Se requieren todos los campos para agregar un nuevo producto.</p>';
             return;
         }
 
-        // Crear una instancia de la clase de conexión
+        // 
         $conexionObj = new Connexio();
         $conexion = $conexionObj->obtenirConnexio();
 
-        // Escapar valores para evitar inyección SQL
+        // 
         $nom = $conexion->real_escape_string($nom);
         $descripcio = $conexion->real_escape_string($descripcio);
         $preu = $conexion->real_escape_string($preu);
         $categoria = $conexion->real_escape_string($categoria);
 
-        // Consulta para agregar un nuevo producto a la base de datos
+        // 
         $consulta = "INSERT INTO productes (nom, descripció, preu, categoria_id)
                      VALUES ('$nom', '$descripcio', '$preu', '$categoria')";
 
@@ -31,12 +31,12 @@ class Nou {
             echo '<p>Error al agregar el nuevo producto: ' . $conexion->error . '</p>';
         }
 
-        // Cerrar la conexión
+        //
         $conexion->close();
     }
 }
 
-// Obtener las categorías disponibles
+// 
 function obtenirCategories() {
     $conexionObj = new Connexio();
     $conexion = $conexionObj->obtenirConnexio();
@@ -52,13 +52,13 @@ function obtenirCategories() {
         }
     }
 
-    // Cerrar la conexión
+    //
     $conexion->close();
 
     return $categories;
 }
 
-// Verificar si se han enviado datos del formulario
+//
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener los valores del formulario
     $nom = isset($_POST['nom']) ? $_POST['nom'] : null;
@@ -66,12 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $preu = isset($_POST['preu']) ? $_POST['preu'] : null;
     $categoria = isset($_POST['categoria']) ? $_POST['categoria'] : null;
 
-    // Crear una instancia de la clase y agregar el nuevo producto
+    //
     $nouProducte = new Nou();
     $nouProducte->afegirProducte($nom, $descripcio, $preu, $categoria);
 }
 
-// Obtener las categorías disponibles
+// 
 $categorias = obtenirCategories();
 ?>
 
@@ -81,7 +81,7 @@ $categorias = obtenirCategories();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Nuevo Producto</title>
-        <!-- Enlace a Bootstrap desde su repositorio remoto -->
+        <!--  -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     </head>
     <body>
