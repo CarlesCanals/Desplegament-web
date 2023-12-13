@@ -50,7 +50,7 @@ class Header {
         
         
 
-        // Encabezado con el logo y el menú principal
+        // 
         echo '<header class="container-fluid navbar-custom">
                 <div class="container">
                     <div class="row align-items-center">
