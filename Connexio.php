@@ -1,9 +1,7 @@
 <?php
 
 class Connexio {
-  
-    //Connexió
-
+    //Dades de la connexió.
     private $host = "localhost";
     private $usuario = "root";
     private $contraseña = "";
