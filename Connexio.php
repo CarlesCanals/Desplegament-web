@@ -1,7 +1,7 @@
 <?php
 
 class Connexio {
-    //Dades de la connexió a la base de dades.
+    //Dades de la connexió a la base de dades la_meva_botiga.
     private $host = "localhost";
     private $usuario = "root";
     private $contraseña = "";
