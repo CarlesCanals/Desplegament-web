@@ -2,7 +2,9 @@
 
 class Header {
     
+    // Método para mostrar el encabezado
     public function mostrarHeader() {
+        // Imprime la estructura básica de un documento HTML con el encabezado y los estilos
         echo '<!DOCTYPE html>
               <html lang="es">
               <head>
@@ -12,6 +14,7 @@ class Header {
                 <!-- Enlace a Bootstrap desde su repositorio remoto -->
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
                 
+                <!-- Estilos personalizados -->
                 <style>
                     body {
                         margin-bottom: 70px; /* Ajusta la altura del footer fijo */
@@ -35,7 +38,7 @@ class Header {
                     }
                     
                     /* Estilos adicionales para personalizar el carrusel */
-                        #carrusel-container {
+                    #carrusel-container {
                         margin-top: 50px;
                     }
                     .carousel-inner {
@@ -43,14 +46,12 @@ class Header {
                         width: 100%;
                         overflow: hidden;
                         height: 150px;
-                      }
+                    }
                 </style>
               </head>
               <body>';
         
-        
-
-        // 
+        // Imprime el encabezado con la barra de navegación y el logotipo
         echo '<header class="container-fluid navbar-custom">
                 <div class="container">
                     <div class="row align-items-center">
@@ -92,11 +93,12 @@ class Header {
                 </div>
               </header>';
         
+        // Imprime el carrusel con imágenes
         echo '<div class="container" id="carrusel-container">
     <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://img.freepik.com/free-vector/template-banner-online-store-with-shopping-cart-with-purchases-boxes-delivery-from-supermarket-vector-illustration_548887-104.jpg?w=2000&t=st=1701788835~exp=1701789435~hmac=d35b956865746e2f32a7e1b93733a0614acb1eb01e9180747eb1bac78024eb0c" class="d-block w-100" alt="Imagen 1" style="margin-top:-200px">
+                <img src="https://img.freepik.com/free-vector/template-banner-online-store-with-shopping-cart-with-purchases-boxes-delivery-from-supermarket-vector-illustration_548887-104.jpg?w=2000&t=st=1701788835~exp=1701789435~hmac=d35b956865746e2f32a7e1b93733a0614acb1eb01e9180747eb1bac78024eb0e" class="d-block w-100" alt="Imagen 1" style="margin-top:-200px">
             </div>
             <div class="carousel-item">
                 <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX31859615.jpg" class="d-block w-100" alt="Imagen 2" style="margin-top:-100px">
@@ -116,11 +118,10 @@ class Header {
     </div>
 </div>';
     }
-
-    
 }
 
-$cap = new Header();
-$cap->mostrarHeader();
+// Crea una instancia de la clase Header y llama al método mostrarHeader
+$header = new Header();
+$header->mostrarHeader();
 
 ?>
