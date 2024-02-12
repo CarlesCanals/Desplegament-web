@@ -1,0 +1,1 @@
+<!-- Comentari per arxiu Nou.php -->
