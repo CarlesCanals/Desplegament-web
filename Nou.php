@@ -8,7 +8,7 @@
 <body>
 
 <?php
-echo "nou document";
+echo "nou document 2";
 ?>
 
 </body>
