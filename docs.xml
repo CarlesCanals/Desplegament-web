@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpdoc xmlns="http://www.phpdoc.org/xsd">
+  <project name="La meva aplicació" version="1.0">
+    <description>Aquesta és la meva aplicació de prova.</description>
+    <files>
+      <file>./src/*.php</file>
+    </files>
+    <output>./docs</output>
+    <template>./vendor/phpdocumentor/template/default</template>
+  </project>
+</phpdoc>
